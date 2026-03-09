@@ -1,7 +1,7 @@
 import os
 from PyQt6.QtCore import pyqtSignal, Qt
-from PyQt6.QtWidgets import QFrame, QLabel, QVBoxLayout, QFileDialog, QApplication, QWidget
-
+from PyQt6.QtWidgets import QFrame, QLabel, QVBoxLayout, QHBoxLayout, QFileDialog, QApplication, QWidget, QPushButton
+import backend
 
 class FileDropBox(QFrame):
     fileSelected = pyqtSignal(str, str)  # emits the file path and file extenstion
@@ -39,7 +39,7 @@ class FileDropBox(QFrame):
         if not path or not os.path.exists(path):
             return
 
-        if path.replace("/", "")[-4:].lower() != self.fileExtenstion:
+        if path.replace("/", "")[-4:].lower() != self.fileExtenstion[-4:].lower():
             # We gonna ignore these as we are looking for apps
             pass
         else:
@@ -101,12 +101,33 @@ window = QWidget()
 window.show()
 window.setWindowTitle("Logo Liquify")
 
-layout = QVBoxLayout(window)
+mainLayout = QVBoxLayout(window)
+dropBoxLayout = QHBoxLayout()
+mainLayout.addLayout(dropBoxLayout)
 
-
-appBundleDrop = FileDropBox(dialogCaption="Pick an app bundle", fileFilter="App Bundle (*.app);;All Files (*)", fileExtenstion=".app")
+appBundleDrop = FileDropBox(dialogCaption="Pick an app bundle", fileFilter="App Bundle (*.app)", fileExtenstion=".app")
 appBundleDrop.fileSelected.connect(onFileDrop)
 
-layout.addWidget(appBundleDrop)
+iconBundleDrop = FileDropBox(dialogCaption="Pick an icon file", fileFilter="Icon file (*.icon)", fileExtenstion=".icon")
+iconBundleDrop.fileSelected.connect(onFileDrop)
+
+def updateIcons():
+    # Add the paths next 
+    if appBundleDrop._path != "" and iconBundleDrop != "":
+        backend.IconHandler(appBundlePath=appBundleDrop._path, iconBundlePath=iconBundleDrop._path)
+        
+
+    
+    
+startButton = QPushButton("Click Me")
+startButton.clicked.connect(updateIcons)
+
+dropBoxLayout.addWidget(appBundleDrop)
+dropBoxLayout.addWidget(iconBundleDrop)
+
+mainLayout.addWidget(startButton)
+
+
+
 # Start the event loop
 app.exec()

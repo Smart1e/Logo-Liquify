@@ -7,7 +7,7 @@ import shutil
 
 class IconHandler:
     def __init__(
-        self, appBundlePath, iconBundlePath, cliBased=True, verboseErrors=False
+        self, appBundlePath: str, iconBundlePath: str, cliBased=True, verboseErrors=False
     ):
         """This class holds the functions to add a .icon file into a usable MacOS application
 
@@ -227,5 +227,5 @@ class IconHandler:
         )
         return True
 
-
-IconHandler("path/to/your.app", "path/to/your.icon")
+if __name__ == "__main__":
+    IconHandler("path/to/your.app", "path/to/your.icon")
