@@ -1,32 +1,58 @@
+import json
 import subprocess
 from pathlib import Path
+from tempfile import TemporaryDirectory
 import plistlib
 import os
 import shutil
 
 
 class IconHandler:
+    ICON_SIZES = [
+        ("16x16", 1, 16),
+        ("16x16", 2, 32),
+        ("32x32", 1, 32),
+        ("32x32", 2, 64),
+        ("128x128", 1, 128),
+        ("128x128", 2, 256),
+        ("256x256", 1, 256),
+        ("256x256", 2, 512),
+        ("512x512", 1, 512),
+        ("512x512", 2, 1024),
+    ]
+
     def __init__(
-        self, appBundlePath: str, iconBundlePath: str, cliBased=True, verboseErrors=False
+        self, appBundlePath: str, iconBundlePath: str, cliBased=True, verboseErrors=False, experimental=False
     ):
         """This class holds the functions to add a .icon file into a usable MacOS application
 
         Args:
             cliBased (bool, optional): Set False if this is the backend of a UI, leave as True for . Defaults to True.
             verboseErrors (bool, optional): Set True for verbose terminal messages. Please note, cliBased needs to be set as True.
+            experimental (bool, optional): Set True to use the experimental path that passes
+                the .icon file directly to actool. When False (default), uses the xcassets
+                pipeline with sips resizing to match the build_macos_nuitka approach.
         """
         # Sets some variables that other functions use
         self.cliBased = cliBased
         self.verboseErrors = verboseErrors
+        self.experimental = experimental
 
         self.appBundlePath = appBundlePath
         self.iconBundlePath = iconBundlePath
+        self.iconName = Path(iconBundlePath).stem
 
         self.validateData()
 
-        self.compileIcon(self.iconBundlePath)
-        self.updateInfoPlist(f"{self.appBundlePath}/Contents/Info.plist")
-        self.moveIconToApp()
+        if self.experimental:
+            self.compileIconExperimental(self.iconBundlePath)
+            self.updateInfoPlist(f"{self.appBundlePath}/Contents/Info.plist")
+            self.moveIconToAppExperimental()
+        else:
+            self.compileIcon(self.iconBundlePath)
+            self.updateInfoPlist(f"{self.appBundlePath}/Contents/Info.plist")
+            self.moveIconToApp()
+
         self.resignAppForLocalUse()
 
     def logMessage(self, simpleMessage, verboseMessage=""):
@@ -86,19 +112,104 @@ class IconHandler:
             return False
 
     def compileIcon(self, iconPath):
+        """Compile icon by extracting PNGs from .icon bundle, resizing with sips, and building xcassets."""
+        iconPath = Path(iconPath)
+        if not self.validatePath(str(iconPath)):
+            return
+
+        # Find the base PNG from the .icon bundle
+        if iconPath.is_dir():
+            pngs = list(iconPath.rglob("*.png"))
+            if not pngs:
+                self.logMessage(f"No PNG assets found inside icon bundle: {iconPath}")
+                return
+            basePng = max(pngs, key=lambda p: p.stat().st_size)
+        else:
+            basePng = iconPath
+
+        if not basePng.is_file():
+            self.logMessage(f"Base icon PNG not found: {basePng}")
+            return
+
+        sipsPath = shutil.which("sips")
+        if not sipsPath:
+            self.logMessage("sips not found; it is required to resize icon assets.")
+            return
+
+        actoolPath = shutil.which("actool")
+        if not actoolPath:
+            self.logMessage("actool not found. Install Xcode or Xcode Command Line Tools.")
+            return
+
+        # Clean and create staging directory
         try:
             shutil.rmtree("./OutputDir")
         except FileNotFoundError:
-            # The directory does not exist so we can move straight to creating one
+            pass
+        os.mkdir("./OutputDir")
+
+        with TemporaryDirectory() as tmpdir:
+            xcassetsDir = Path(tmpdir) / "Assets.xcassets"
+            appIconsetDir = xcassetsDir / f"{self.iconName}.appiconset"
+            compiledDir = Path(tmpdir) / "compiled"
+            appIconsetDir.mkdir(parents=True, exist_ok=True)
+            compiledDir.mkdir(parents=True, exist_ok=True)
+
+            # Resize base PNG to all required macOS icon sizes
+            entries = []
+            for sizeStr, scale, pixels in self.ICON_SIZES:
+                dest = appIconsetDir / f"icon_{sizeStr}@{scale}x.png"
+                subprocess.run(
+                    [sipsPath, "-z", str(pixels), str(pixels), str(basePng), "--out", str(dest)],
+                    capture_output=True, text=True,
+                )
+                entries.append({
+                    "size": sizeStr, "idiom": "mac",
+                    "scale": f"{scale}x", "filename": dest.name,
+                })
+
+            contentsJson = {"images": entries, "info": {"version": 1, "author": "xcode"}}
+            (appIconsetDir / "Contents.json").write_text(json.dumps(contentsJson, indent=2))
+
+            partialInfoPlist = compiledDir / "assetcatalog_generated_info.plist"
+            actoolResult = subprocess.run(
+                [
+                    actoolPath, str(xcassetsDir),
+                    "--compile", str(compiledDir),
+                    "--platform", "macosx",
+                    "--minimum-deployment-target", "13.0",
+                    "--app-icon", self.iconName,
+                    "--output-partial-info-plist", str(partialInfoPlist),
+                ],
+                capture_output=True, text=True,
+            )
+
+            self.logMessage(
+                "Icon compiled via xcassets pipeline",
+                f"stdout: {actoolResult.stdout}\n\nstderr: {actoolResult.stderr}",
+            )
+
+            compiledCar = compiledDir / "Assets.car"
+            if not compiledCar.is_file():
+                self.logMessage("actool did not produce Assets.car; ensure the .icon file is valid.")
+                return
+
+            # Stage Assets.car for moveIconToApp
+            shutil.copy2(compiledCar, "./OutputDir/Assets.car")
+
+        self.logMessage("Assets.car staged in ./OutputDir")
+
+    def compileIconExperimental(self, iconPath):
+        """[Experimental] Pass .icon file directly to actool without manual PNG extraction."""
+        try:
+            shutil.rmtree("./OutputDir")
+        except FileNotFoundError:
             pass
         os.mkdir("./OutputDir")
 
         if not self.validatePath(iconPath):
-            # The path was reported as not valid
             return
 
-        # If we are here the path worked, and now we run actool
-        self.iconName = iconPath.split("/")[-1].split(".")[0]
         actoolResponse = subprocess.run(
             [
                 "actool",
@@ -131,7 +242,7 @@ class IconHandler:
         for index, file in enumerate(files):
             old_path = os.path.join(path, file)
 
-            name, ext = os.path.splitext(file)  # keeps original extension
+            name, ext = os.path.splitext(file)
             new_name = f"AppIcon{ext}"
 
             new_path = os.path.join(path, new_name)
@@ -155,6 +266,32 @@ class IconHandler:
             plistlib.dump(plistData, plistFile)
 
     def moveIconToApp(self, appBundlePath=""):
+        """Copy only Assets.car into the app bundle's Resources directory."""
+        if appBundlePath == "":
+            appBundlePath = self.appBundlePath
+
+        resourcesDir = Path(appBundlePath) / "Contents" / "Resources"
+        if not resourcesDir.is_dir():
+            self.logMessage(f"Resources directory not found: {resourcesDir}")
+            return
+
+        stagedCar = Path("./OutputDir/Assets.car")
+        if not stagedCar.is_file():
+            self.logMessage("No Assets.car found in OutputDir; compile step may have failed.")
+            return
+
+        targetCar = resourcesDir / "Assets.car"
+        shutil.copy2(stagedCar, targetCar)
+        self.logMessage(f"Copied Assets.car to {targetCar}")
+
+        # Clean up staging directory
+        try:
+            shutil.rmtree("./OutputDir")
+        except FileNotFoundError:
+            pass
+
+    def moveIconToAppExperimental(self, appBundlePath=""):
+        """[Experimental] Replace all resources with compiled output."""
         if appBundlePath == "":
             appBundlePath = self.appBundlePath
 
@@ -162,7 +299,6 @@ class IconHandler:
         try:
             os.mkdir(f"{appBundlePath}/Contents/Resources/oldFiles")
         except FileExistsError:
-            # Script has probs already ran but we canc ontinue
             pass
         for f in allOldFiles:
             if "oldFiles" not in f:
@@ -225,6 +361,20 @@ class IconHandler:
             "App re-signed for local use.",
             f"stdout: {result.stdout}\n\nstderr: {result.stderr}",
         )
+
+        # Verify the signature
+        verifyResult = subprocess.run(
+            [codesignPath, "--verify", "--deep", "--strict", str(bundlePath)],
+            capture_output=True, text=True,
+        )
+        if verifyResult.returncode != 0:
+            self.logMessage(
+                "Codesign verification failed.",
+                f"stdout: {verifyResult.stdout}\n\nstderr: {verifyResult.stderr}",
+            )
+        else:
+            self.logMessage("Codesign verification succeeded.")
+
         return True
 
 if __name__ == "__main__":
