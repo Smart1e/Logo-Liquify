@@ -2,15 +2,15 @@
 import PackageDescription
 
 let package = Package(
-    name: "IconChanger",
+    name: "LogoLiquify",
     platforms: [.macOS(.v26)],
     products: [
-        .executable(name: "IconChanger", targets: ["IconChanger"]),
+        .executable(name: "LogoLiquify", targets: ["LogoLiquify"]),
     ],
     targets: [
         .executableTarget(
-            name: "IconChanger",
-            path: "Sources/IconChanger",
+            name: "LogoLiquify",
+            path: "Sources/LogoLiquify",
             swiftSettings: [
                 .unsafeFlags(["-parse-as-library"]),
             ]

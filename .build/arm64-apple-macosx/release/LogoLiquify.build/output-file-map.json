@@ -1,0 +1,37 @@
+{
+  "": {
+    "dependencies": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/LogoLiquify.d",
+    "object": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/LogoLiquify.o",
+    "swift-dependencies": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/primary.swiftdeps"
+  },
+  "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/LogoLiquify/ContentView.swift": {
+    "object": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/ContentView.swift.o",
+    "swiftmodule": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/ContentView~partial.swiftmodule",
+    "swift-dependencies": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/ContentView.swiftdeps",
+    "diagnostics": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/ContentView.dia"
+  },
+  "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/LogoLiquify/FileDropCard.swift": {
+    "object": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/FileDropCard.swift.o",
+    "swiftmodule": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/FileDropCard~partial.swiftmodule",
+    "swift-dependencies": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/FileDropCard.swiftdeps",
+    "diagnostics": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/FileDropCard.dia"
+  },
+  "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/LogoLiquify/IconReplacer.swift": {
+    "object": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/IconReplacer.swift.o",
+    "swiftmodule": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/IconReplacer~partial.swiftmodule",
+    "swift-dependencies": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/IconReplacer.swiftdeps",
+    "diagnostics": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/IconReplacer.dia"
+  },
+  "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/LogoLiquify/LogoLiquifyApp.swift": {
+    "object": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/LogoLiquifyApp.swift.o",
+    "swiftmodule": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/LogoLiquifyApp~partial.swiftmodule",
+    "swift-dependencies": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/LogoLiquifyApp.swiftdeps",
+    "diagnostics": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/LogoLiquifyApp.dia"
+  },
+  "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/LogoLiquify/LogoLiquifyModel.swift": {
+    "object": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/LogoLiquifyModel.swift.o",
+    "swiftmodule": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/LogoLiquifyModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/LogoLiquifyModel.swiftdeps",
+    "diagnostics": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/LogoLiquifyModel.dia"
+  }
+}

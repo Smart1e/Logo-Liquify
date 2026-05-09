@@ -5,20 +5,20 @@
             "request": "launch",
             "args": [],
             "cwd": "${workspaceFolder:Logo-Liquify}",
-            "name": "Debug IconChanger",
-            "target": "IconChanger",
+            "name": "Debug LogoLiquify",
+            "target": "LogoLiquify",
             "configuration": "debug",
-            "preLaunchTask": "swift: Build Debug IconChanger"
+            "preLaunchTask": "swift: Build Debug LogoLiquify"
         },
         {
             "type": "swift",
             "request": "launch",
             "args": [],
             "cwd": "${workspaceFolder:Logo-Liquify}",
-            "name": "Release IconChanger",
-            "target": "IconChanger",
+            "name": "Release LogoLiquify",
+            "target": "LogoLiquify",
             "configuration": "release",
-            "preLaunchTask": "swift: Build Release IconChanger"
+            "preLaunchTask": "swift: Build Release LogoLiquify"
         }
     ]
 }

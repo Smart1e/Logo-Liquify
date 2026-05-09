@@ -1,0 +1,311 @@
+{
+  "builtTestProducts" : [
+
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.LogoLiquify-arm64-apple-macosx-release.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/sources",
+      "importPath" : "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/LogoLiquify/ContentView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/LogoLiquify/FileDropCard.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/LogoLiquify/IconReplacer.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/LogoLiquify/LogoLiquifyApp.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/LogoLiquify/LogoLiquifyModel.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/sources"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "LogoLiquify",
+      "moduleOutputPath" : "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/Modules/LogoLiquify.swiftmodule",
+      "objects" : [
+        "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/ContentView.swift.o",
+        "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/FileDropCard.swift.o",
+        "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/IconReplacer.swift.o",
+        "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/LogoLiquifyApp.swift.o",
+        "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/LogoLiquifyModel.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx26.0",
+        "-whole-module-optimization",
+        "-num-threads",
+        "8",
+        "-serialize-diagnostics",
+        "-O",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/ModuleCache",
+        "-parseable-output",
+        "-Xfrontend",
+        "-entry-point-function-name",
+        "-Xfrontend",
+        "LogoLiquify_main",
+        "-color-diagnostics",
+        "-swift-version",
+        "6",
+        "-parse-as-library",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "logo_liquify"
+      ],
+      "outputFileMapPath" : "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/ContentView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/FileDropCard.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/IconReplacer.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/LogoLiquifyApp.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/LogoLiquifyModel.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/Modules/LogoLiquify.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/LogoLiquify/ContentView.swift",
+        "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/LogoLiquify/FileDropCard.swift",
+        "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/LogoLiquify/IconReplacer.swift",
+        "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/LogoLiquify/LogoLiquifyApp.swift",
+        "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/LogoLiquify/LogoLiquifyModel.swift"
+      ],
+      "tempsPath" : "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build",
+      "wholeModuleOptimization" : true
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "LogoLiquify" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "LogoLiquify",
+      "-package-name",
+      "logo_liquify",
+      "-c",
+      "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/LogoLiquify/ContentView.swift",
+      "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/LogoLiquify/FileDropCard.swift",
+      "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/LogoLiquify/IconReplacer.swift",
+      "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/LogoLiquify/LogoLiquifyApp.swift",
+      "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/LogoLiquify/LogoLiquifyModel.swift",
+      "-I",
+      "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/Modules",
+      "-target",
+      "arm64-apple-macosx26.0",
+      "-whole-module-optimization",
+      "-num-threads",
+      "8",
+      "-serialize-diagnostics",
+      "-O",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/ModuleCache",
+      "-parseable-output",
+      "-Xfrontend",
+      "-entry-point-function-name",
+      "-Xfrontend",
+      "LogoLiquify_main",
+      "-color-diagnostics",
+      "-swift-version",
+      "6",
+      "-parse-as-library",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "logo_liquify",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "LogoLiquify" : [
+
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/LogoLiquify/ContentView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/LogoLiquify/FileDropCard.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/LogoLiquify/IconReplacer.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/LogoLiquify/LogoLiquifyApp.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/LogoLiquify/LogoLiquifyModel.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/sources"
+    },
+    "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/ContentView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/FileDropCard.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/IconReplacer.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/LogoLiquifyApp.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.build/LogoLiquifyModel.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify.product/Objects.LinkFileList"
+    },
+    "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt"
+    }
+  }
+}

@@ -1,14 +1,14 @@
 #!/bin/bash
-# Build IconChanger as an arm64-only macOS 26+ .app bundle.
+# Build LogoLiquify as an arm64-only macOS 26+ .app bundle.
 #
 # Usage: ./build.sh [--no-icon]
-#   --no-icon  Skip embedding IconChanger's own .icon (use a generic icon).
+#   --no-icon  Skip embedding LogoLiquify's own .icon (use a generic icon).
 
 set -euo pipefail
 
 cd "$(dirname "$0")"
 
-APP_NAME="IconChanger"
+APP_NAME="LogoLiquify"
 APP_BUNDLE="dist/${APP_NAME}.app"
 EMBED_OWN_ICON=1
 
@@ -65,7 +65,7 @@ if [ "$EMBED_OWN_ICON" -eq 1 ] && [ -d "Resources/AppIcon.icon" ]; then
             || /usr/libexec/PlistBuddy -c "Add :CFBundleIconFile string AppIcon" "${APP_BUNDLE}/Contents/Info.plist"
         rm -rf "$TMPCOMP"
     else
-        echo "==> actool not on PATH; skipping IconChanger's own icon."
+        echo "==> actool not on PATH; skipping LogoLiquify's own icon."
     fi
 else
     echo "==> no Resources/AppIcon.icon (or --no-icon); using default app icon"

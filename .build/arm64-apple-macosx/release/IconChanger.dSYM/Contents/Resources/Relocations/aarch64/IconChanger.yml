@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/dan/Documents/GitHub/Logo-Liquify/.build/arm64-apple-macosx/release/LogoLiquify'
+relocations:     []
+...
