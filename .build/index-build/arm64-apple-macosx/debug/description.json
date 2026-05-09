@@ -1,0 +1,277 @@
+{
+  "builtTestProducts" : [
+
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.IconChanger-arm64-apple-macosx-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/IconChanger.build/sources",
+      "importPath" : "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/IconChanger/ContentView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/IconChanger/FileDropCard.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/IconChanger/IconChangerApp.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/IconChanger/IconChangerModel.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/IconChanger/IconReplacer.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/IconChanger.build/sources"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "IconChanger",
+      "moduleOutputPath" : "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/Modules/IconChanger.swiftmodule",
+      "objects" : [
+        "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/IconChanger.build/ContentView.swift.o",
+        "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/IconChanger.build/FileDropCard.swift.o",
+        "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/IconChanger.build/IconChangerApp.swift.o",
+        "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/IconChanger.build/IconChangerModel.swift.o",
+        "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/IconChanger.build/IconReplacer.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx26.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-Onone",
+        "-enable-testing",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-Xfrontend",
+        "-entry-point-function-name",
+        "-Xfrontend",
+        "IconChanger_main",
+        "-swift-version",
+        "6",
+        "-parse-as-library",
+        "-Xfrontend",
+        "-experimental-lazy-typecheck",
+        "-Xfrontend",
+        "-experimental-skip-all-function-bodies",
+        "-Xfrontend",
+        "-experimental-allow-module-with-compiler-errors",
+        "-Xfrontend",
+        "-empty-abi-descriptor",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "logo_liquify"
+      ],
+      "outputFileMapPath" : "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/IconChanger.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/Modules/IconChanger.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : true,
+      "sources" : [
+        "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/IconChanger/ContentView.swift",
+        "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/IconChanger/FileDropCard.swift",
+        "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/IconChanger/IconChangerApp.swift",
+        "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/IconChanger/IconChangerModel.swift",
+        "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/IconChanger/IconReplacer.swift"
+      ],
+      "tempsPath" : "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/IconChanger.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "IconChanger" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "IconChanger",
+      "-package-name",
+      "logo_liquify",
+      "-c",
+      "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/IconChanger/ContentView.swift",
+      "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/IconChanger/FileDropCard.swift",
+      "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/IconChanger/IconChangerApp.swift",
+      "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/IconChanger/IconChangerModel.swift",
+      "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/IconChanger/IconReplacer.swift",
+      "-I",
+      "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx26.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-Onone",
+      "-enable-testing",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-Xfrontend",
+      "-entry-point-function-name",
+      "-Xfrontend",
+      "IconChanger_main",
+      "-swift-version",
+      "6",
+      "-parse-as-library",
+      "-Xfrontend",
+      "-experimental-lazy-typecheck",
+      "-Xfrontend",
+      "-experimental-skip-all-function-bodies",
+      "-Xfrontend",
+      "-experimental-allow-module-with-compiler-errors",
+      "-Xfrontend",
+      "-empty-abi-descriptor",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "logo_liquify",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "IconChanger" : [
+
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/IconChanger.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/IconChanger/ContentView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/IconChanger/FileDropCard.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/IconChanger/IconChangerApp.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/IconChanger/IconChangerModel.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/IconChanger/IconReplacer.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/IconChanger.build/sources"
+    },
+    "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+    }
+  }
+}

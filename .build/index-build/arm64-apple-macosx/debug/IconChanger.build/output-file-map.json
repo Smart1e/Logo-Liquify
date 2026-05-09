@@ -1,0 +1,40 @@
+{
+  "": {
+    "swift-dependencies": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/IconChanger.build/primary.swiftdeps"
+  },
+  "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/IconChanger/ContentView.swift": {
+    "dependencies": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/IconChanger.build/ContentView.d",
+    "object": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/IconChanger.build/ContentView.swift.o",
+    "swiftmodule": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/IconChanger.build/ContentView~partial.swiftmodule",
+    "swift-dependencies": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/IconChanger.build/ContentView.swiftdeps",
+    "diagnostics": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/IconChanger.build/ContentView.dia"
+  },
+  "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/IconChanger/FileDropCard.swift": {
+    "dependencies": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/IconChanger.build/FileDropCard.d",
+    "object": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/IconChanger.build/FileDropCard.swift.o",
+    "swiftmodule": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/IconChanger.build/FileDropCard~partial.swiftmodule",
+    "swift-dependencies": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/IconChanger.build/FileDropCard.swiftdeps",
+    "diagnostics": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/IconChanger.build/FileDropCard.dia"
+  },
+  "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/IconChanger/IconChangerApp.swift": {
+    "dependencies": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/IconChanger.build/IconChangerApp.d",
+    "object": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/IconChanger.build/IconChangerApp.swift.o",
+    "swiftmodule": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/IconChanger.build/IconChangerApp~partial.swiftmodule",
+    "swift-dependencies": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/IconChanger.build/IconChangerApp.swiftdeps",
+    "diagnostics": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/IconChanger.build/IconChangerApp.dia"
+  },
+  "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/IconChanger/IconChangerModel.swift": {
+    "dependencies": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/IconChanger.build/IconChangerModel.d",
+    "object": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/IconChanger.build/IconChangerModel.swift.o",
+    "swiftmodule": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/IconChanger.build/IconChangerModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/IconChanger.build/IconChangerModel.swiftdeps",
+    "diagnostics": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/IconChanger.build/IconChangerModel.dia"
+  },
+  "/Users/dan/Documents/GitHub/Logo-Liquify/Sources/IconChanger/IconReplacer.swift": {
+    "dependencies": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/IconChanger.build/IconReplacer.d",
+    "object": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/IconChanger.build/IconReplacer.swift.o",
+    "swiftmodule": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/IconChanger.build/IconReplacer~partial.swiftmodule",
+    "swift-dependencies": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/IconChanger.build/IconReplacer.swiftdeps",
+    "diagnostics": "/Users/dan/Documents/GitHub/Logo-Liquify/.build/index-build/arm64-apple-macosx/debug/IconChanger.build/IconReplacer.dia"
+  }
+}
